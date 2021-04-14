@@ -22,7 +22,24 @@ struct ContentView: View {
             }, label: {
                 Text("Button")
             })
+            
+            NavigationView {
+                NavigationLink(
+                    destination: SecondView(secondText: "Second View!"),
+                    label: {
+                        /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
+                    })
+            }
         }
+    }
+}
+
+struct SecondView: View {
+    let secondText: String
+    
+    var body: some View {
+        Text(secondText)
+            .padding()
     }
 }
 
